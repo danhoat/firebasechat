@@ -1,0 +1,12 @@
+https://firebase.google.com/docs/web/learn-more
+
+https://cdnjs.cloudflare.com/ajax/libs/firebase/9.13.0/firebase-database.min.js
+https://cdnjs.com/libraries/firebase
+
+Do you use ESM and want to use browser modules? Replace all your import lines to use the following pattern:
+import { } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-SERVICE.js'
+(where SERVICE is an SDK name such as firebase-firestore).
+
+
+
+https://blog.logrocket.com/how-to-build-deploy-vue-js-app-with-cloud-firestore-vuefire/
