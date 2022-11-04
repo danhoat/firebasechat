@@ -23,9 +23,22 @@
 
 
       const app = initializeApp(firebaseConfig);
+      const dbs = getFirestore(app);
 
 
-        const dbs = getFirestore(app);
+
+
+    // Get a list of cities from your database
+    async function getCities(dbs) {
+      const citiesCol = collection(dbs, 'users');
+      const citySnapshot = await getDocs(citiesCol);
+      const cityList = citySnapshot.docs.map(doc => doc.data());
+      return cityList;
+    }
+    var cities = getCities();
+    console.log('List cities: ');
+    console.log(cities);
+
 
 
        var data =  {
@@ -85,12 +98,19 @@
     });
     var myUserId = 10;
    const topUserPostsRef = query(ref(db, 'user-posts/' + myUserId), orderByChild('starCount'));
-   console.log(topUserPostsRef);
+
+
+   var list = get(ref(db, 'messsages/'));
+    console.log('list messsages: ');
+    console.log(list);
 
     //  const snapshot = await dbs.collection('users').get()
     // var list =  snapshot.docs.map(doc => doc.data());
     // console.log(list);
 
+
+     // var playersRef = ref(db, 'messages'); 
+ 
 
     const querySnapshot = await getDocs(collection(dbs, "users"));
 querySnapshot.forEach((doc) => {

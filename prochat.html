@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase-database.js"></script>
+    <link rel="stylesheet" type="text/css" href="prochat.css"/>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="chatpro.js"></script>
+    <title>Firebase Chat</title>
+  </head>
+  <body>
+    <div id="header">
+        <center><h1> Pro Chat Firebase Example</h1></center>
+        <nav >
+          <ul class="menu">
+            <li><a href="docs.html"> Docs </a></li>
+            <li><a href="prochat.html"> Pro Chat </a></li>
+            <li><a href="index.html"> Home </a></li>
+
+          </ul>
+        </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col prochat" id="frame_chat">
+         <ul id='messagesDiv' class="messages"></ul>
+         <form class="form-chat">
+          <select name="sender" class="sender">
+            <option value="John">John</option>
+            <option value="David">David</option>
+          </select><textarea id="messageInput" class="messageInput" name="message" placeholder="Type Your Message" required="required"></textarea>
+          <button type="submit" class="btn-send-message"><img src ="img/btn-send-message.png" /></button>
+          <input type="reset" name="reset" class="btn-reset hide">
+        </form>
+        </div>
+
+      </div>
+
+
+  </div>
+  <div id="footer">
+    <p><center>This is chat example.</center><center> Danng</center></p>
+  </div>
+
+  </body>
+</html>
